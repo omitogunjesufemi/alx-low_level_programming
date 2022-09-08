@@ -6,6 +6,10 @@
  */
 int main(void)
 {
-	fprintf(stderr, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
+	char string1[] = "and that piece of art is useful\" - Dora Korpar, ";
+
+	char string2[] = "2015-10-19";
+
+	fprintf(stderr, "%s%s\n", string1, string2);
 	return (1);
 }
