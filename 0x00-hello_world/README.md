@@ -7,3 +7,5 @@
 TASK | DESCRIPTION
 --- | ---
 `0-preprocessor` | This runs a C file through the preprocessor and save the result into another file.
+`1-compiler` | This compiles a C file but does not link.
+`2-assembler` | This generate the assembly code of a C code and save it in an output file.
