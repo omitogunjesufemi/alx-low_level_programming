@@ -5,3 +5,4 @@
 
 TASK | DESCRIPTION
 --- | ---
+`0-positive_or_negative` | This program assign a random number to the variable n and print whether the number stored in the variable n is positive or negative.
