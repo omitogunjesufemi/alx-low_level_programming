@@ -6,12 +6,19 @@
  */
 int main(void)
 {
-	char z = 'z';
+	int i = 48;
+	char a = 'a';
 
-	while (z >= 'a')
+	while (i < 58)
 	{
-		putchar(z);
-		z--;
+		putchar(i);
+		i++;
+	}
+
+	while (a <= 'f')
+	{
+		putchar(a);
+		a++;
 	}
 	putchar('\n');
 	return (0);
