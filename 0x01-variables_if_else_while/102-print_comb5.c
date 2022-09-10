@@ -6,10 +6,8 @@
  */
 int main(void)
 {
-	int i = 48;
-	int j = 48;
-	int k, l;
-	int currentj, prevj;
+	int i = 48, j = 48;
+	int k, l, currentj, prevj;
 
 	while (i < 58)
 	{
@@ -30,8 +28,12 @@ int main(void)
 					putchar(' ');
 					putchar(k);
 					putchar(l);
-					putchar(',');
-					putchar(' ');
+					if (!((i == 57) && (j == 56) && (k == 57) && (l == 57)))
+					{
+						putchar(',');
+						putchar(' ');
+					}
+
 					l++;
 					prevj = currentj;
 				}
@@ -39,7 +41,7 @@ int main(void)
 			}
 			j++;
 		}
-		j=48;
+		j = 48;
 		i++;
 	}
 	putchar('\n');
