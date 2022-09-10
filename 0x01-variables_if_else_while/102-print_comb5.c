@@ -8,17 +8,21 @@ int main(void)
 {
 	int i = 48;
 	int j = 48;
-	int k = 48;
-	int l = 49;
+	int k, l;
+	int currentj, prevj;
 
 	while (i < 58)
 	{
 		while (j < 58)
 		{
+			currentj = j;
 			k = i;
 			while (k < 58)
 			{
-				l = j + 1;
+				if (currentj != prevj)
+					l = j + 1;
+				else
+					l = 48;
 				while (l < 58)
 				{
 					putchar(i);
@@ -29,6 +33,7 @@ int main(void)
 					putchar(',');
 					putchar(' ');
 					l++;
+					prevj = currentj;
 				}
 				k++;
 			}

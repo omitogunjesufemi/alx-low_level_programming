@@ -17,3 +17,4 @@ TASK | DESCRIPTION
 `9-print_comb.c` | This prints all posible combinations of single digits numbers in ascending order separated by `,` followed by a space.
 `100-print_comb3.c` | This prints all possible different combinations of two digits.
 `101-print_comb4.c` | This prints all possible different combination of three digits.
+`102-print_combo5.c` | This prints all possible combinations of two two digit numbers
