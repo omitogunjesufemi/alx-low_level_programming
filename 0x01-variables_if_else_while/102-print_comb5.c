@@ -6,42 +6,28 @@
  */
 int main(void)
 {
-	int i = 48, j = 48;
-	int k, l, currentj, prevj;
+	int i = 0;
+	int j = 0;
 
-	while (i < 58)
+	while (i < 99)
 	{
-		while (j < 58)
+		j = i + 1;
+		while (j <= 99)
 		{
-			currentj = j;
-			k = i;
-			while (k < 58)
-			{
-				if (currentj != prevj)
-					l = j + 1;
-				else
-					l = 48;
-				while (l < 58)
-				{
-					putchar(i);
-					putchar(j);
-					putchar(' ');
-					putchar(k);
-					putchar(l);
-					if (!((i == 57) && (j == 56) && (k == 57) && (l == 57)))
-					{
-						putchar(',');
-						putchar(' ');
-					}
+			putchar((i / 10) + '0');
+			putchar((i % 10) + '0');
+			putchar(' ');
+			putchar((j / 10) + '0');
+			putchar((j % 10) + '0');
 
-					l++;
-					prevj = currentj;
-				}
-				k++;
+			if (!((i == 98) && (j == 99)))
+			{
+				putchar(',');
+				putchar(' ');
 			}
+
 			j++;
 		}
-		j = 48;
 		i++;
 	}
 	putchar('\n');
