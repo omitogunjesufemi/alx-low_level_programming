@@ -1,10 +1,5 @@
-#include <stdio.h>
-
 /**
  * _putchar - Print characters
  * @to_be_printed: Argument 1
  */
-void _putchar(char to_be_printed[])
-{
-	printf("%s\n", to_be_printed);
-}
+void _putchar(char to_be_printed[]);
