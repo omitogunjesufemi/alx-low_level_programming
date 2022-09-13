@@ -9,6 +9,6 @@ int main(void)
 {
 	char c[] = "_putchar";
 
-	printf("%s\n", c);
+	_putchar(c);
 	return (0);
 }
