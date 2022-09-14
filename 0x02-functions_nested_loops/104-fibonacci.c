@@ -6,15 +6,15 @@
  */
 int main(void)
 {
-	unsigned long int f0 = 0, f1 = 1;
+	unsigned long f0 = 0, f1 = 1;
 	int i;
 
-	for (i = 0; i < 99; i++)
+	for (i = 0; i < 98; i++)
 	{
-		unsigned long int temp = f1;
+		unsigned long temp = f1;
 
 		f1 = f1 + f0;
-		if (i == 98)
+		if (i == 97)
 			printf("%lu\n", f1);
 		else
 			printf("%lu, ", f1);
