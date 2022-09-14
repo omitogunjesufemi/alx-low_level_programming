@@ -33,6 +33,10 @@ void print_times_table(int n)
 					{
 						three_space_one_digit(result);
 					}
+					else if ((j == 0) && (n == 0))
+					{
+						_putchar((result % 10) + '0');
+					}
 					else
 					{
 						three_space_one_digit(result);
@@ -99,7 +103,8 @@ void two_space_two_digit(int result)
 
 /**
  * one_space_three_digit - times table arrangement
- * @tmp: multiplication output
+ * @temp: multiplication output
+ * @result: multiplication output
  */
 void one_space_three_digit(int temp, int result)
 {
