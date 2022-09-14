@@ -24,7 +24,11 @@ void print_times_table(int n)
 
 				if ((num_of_digits == 1) || (num_of_digits == 0))
 				{
-					if (j == 0)
+					if ((j == 0) && (n == 0))
+					{
+						_putchar((result % 10) + '0');
+					}
+					else if (j == 0)
 					{
 						_putchar((result % 10) + '0');
 						_putchar(',');
@@ -32,10 +36,6 @@ void print_times_table(int n)
 					else if (j == n)
 					{
 						three_space_one_digit(result);
-					}
-					else if ((j == 0) && (n == 0))
-					{
-						_putchar((result % 10) + '0');
 					}
 					else
 					{
