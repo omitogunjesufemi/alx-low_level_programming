@@ -29,4 +29,5 @@ int main(void)
 
 	r = natural();
 	printf("%ld\n", r);
+	return (0);
 }
