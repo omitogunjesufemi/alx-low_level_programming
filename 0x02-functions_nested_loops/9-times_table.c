@@ -1,4 +1,26 @@
 #include "main.h"
+
+/**
+ * two_space_one_digit - arranging the table
+ * @result: result of multiplication
+ */
+void two_space_one_digit(int result)
+{
+	_putchar(' ');
+	_putchar(' ');
+	_putchar((result % 10) + '0');
+}
+
+/**
+ * one_space_two_digit - arranging the table
+ * @result: result of multiplication
+ */
+void one_space_two_digit(int result)
+{
+	_putchar(' ');
+	_putchar((result / 10) + '0');
+	_putchar((result % 10) + '0');
+}
 /**
  * times_table - prints the 9 times table starting with 0
  */
@@ -18,30 +40,22 @@ void times_table(void)
 			}
 			else if ((j == 9) && (result / 10 == 0))
 			{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar((result % 10) + '0');
+				two_space_one_digit(result);
 			}
 			else
 			{
 				if (result / 10 == 0)
 				{
-					_putchar(' ');
-					_putchar(' ');
-					_putchar((result % 10) + '0');
+					two_space_one_digit(result);
 					_putchar(',');
 				}
 				else if ((result / 10 != 0) && (j == 9))
 				{
-					_putchar(' ');
-					_putchar((result / 10) + '0');
-					_putchar((result % 10) + '0');
+					one_space_two_digit(result);
 				}
 				else
 				{
-					_putchar(' ');
-					_putchar((result / 10) + '0');
-					_putchar((result % 10) + '0');
+					one_space_two_digit(result);
 					_putchar(',');
 				}
 			}
