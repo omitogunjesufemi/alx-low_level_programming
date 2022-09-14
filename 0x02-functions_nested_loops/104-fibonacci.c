@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	unsigned long int f0 = 0, f1 = 1, k, l;
+	unsigned long int f0 = 0, f1 = 1;
 	int i;
 
 	for (i = 0; i < 98; i++)
@@ -14,17 +14,9 @@ int main(void)
 		unsigned long int temp = f1;
 
 		f1 = f1 + f0;
-		if ((i >= 91) && (i < 97))
+		if (i == 97)
 		{
-			k = f1 % 100000000000;
-			l = f1 / 100000000000;
-			printf("%lu%lu, ", l, k);
-		}
-		else if (i == 97)
-		{
-			k = f1 % 100000000000;
-			l = f1 / 100000000000;
-			printf("%lu%lu", l, k);
+			printf("%lu\n", f1);
 		}
 		else
 		{
