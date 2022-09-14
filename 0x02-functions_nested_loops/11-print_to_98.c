@@ -41,7 +41,7 @@ void decreasing_counter(int count)
 
 
 /**
- * decreasing_counter - counts from a number higher than 98
+ * increasing_counter - counts from a number higher than 98
  * @count: the beginning of the count
  */
 void increasing_counter(int count)
