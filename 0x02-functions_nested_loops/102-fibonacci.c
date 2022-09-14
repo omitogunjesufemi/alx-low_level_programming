@@ -14,7 +14,7 @@ int main(void)
 		long int temp = f1;
 
 		f1 = f1 + f0;
-		if(i == 49)
+		if (i == 49)
 			printf("%ld\n", f1);
 		else
 			printf("%ld, ", f1);
