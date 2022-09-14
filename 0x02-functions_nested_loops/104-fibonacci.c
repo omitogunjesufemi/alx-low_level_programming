@@ -6,18 +6,18 @@
  */
 int main(void)
 {
-	long int f0 = 0, f1 = 1;
+	unsigned long int f0 = 0, f1 = 1;
 	int i;
 
 	for (i = 0; i < 99; i++)
 	{
-		long int temp = f1;
+		unsigned long int temp = f1;
 
 		f1 = f1 + f0;
-		if(i == 98)
-			printf("%ld\n", f1);
+		if (i == 98)
+			printf("%lu\n", f1);
 		else
-			printf("%ld, ", f1);
+			printf("%lu, ", f1);
 		f0 = temp;
 	}
 	return (0);
