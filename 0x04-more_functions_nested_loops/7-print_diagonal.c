@@ -8,18 +8,16 @@ void print_spaces(int a);
  */
 void print_diagonal(int n)
 {
-	if (n > 0)
-	{
-		int i;
+	int i;
 
-		for (i = 1; i <= n; i++)
-		{
-			print_spaces(i);
-			_putchar('\\');
-			_putchar('\n');
-		}
+	for (i = 1; i <= n; i++)
+	{
+		print_spaces(i);
+		_putchar('\\');
+		_putchar('\n');
 	}
-	else
+
+	if (n <= 0)
 	{
 		_putchar('\n');
 	}
