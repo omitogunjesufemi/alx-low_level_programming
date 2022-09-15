@@ -65,3 +65,9 @@ void print_square(int size);
  * @n: int
  */
 void print_triangle(int size);
+
+/**
+ * print_number - This prints the value of an integer
+ * @n: value to be printed
+ */
+void print_number(int n);
