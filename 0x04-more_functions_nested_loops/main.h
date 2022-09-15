@@ -41,3 +41,9 @@ void print_most_numbers(void);
  * more_numbers - This prints the numbers from 0 to 9, 10 times.
  */
 void more_numbers(void);
+
+/**
+ * print_line - This draws a straight line in the terminal
+ * @n: int
+ */
+void print_line(int n);
