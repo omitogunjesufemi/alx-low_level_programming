@@ -1,29 +1,43 @@
 /**
- *This is for printing characters
+ *_putchar - This is for printing characters
+ * @c: character
+ * Return: int
  */
 int _putchar(char c);
 
 /**
- * This checks for uppercase characters
+ * _isupper - This checks for uppercase characters
+ * @c: int
+ * Return: int
  */
 int _isupper(int c);
 
 /**
- * This checks for a digit (0 through 9)
+ * _isdigit - This checks for a digit (0 through 9)
+ * @c: int
+ * Return: int
  */
 int _isdigit(int c);
 
 /**
- * This multiplies two integers
+ * mul - This multiplies two integers
+ * @a: int
+ * @b: int
+ * Return: int
  */
 int mul(int a, int b);
 
 /**
- * This prints the numbers from 0 to 9, followed by a new line
+ * print_numbers - This prints the numbers from 0 to 9, followed by a new line
  */
 void print_numbers(void);
 
 /**
- * This prints the numbers from 0 to 9, excluding 2 and 4.
+ * print_most_numbers - This prints the numbers from 0 to 9, excluding 2 and 4.
  */
 void print_most_numbers(void);
+
+/**
+ * more_numbers - This prints the numbers from 0 to 9, 10 times.
+ */
+void more_numbers(void);
