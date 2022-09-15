@@ -35,6 +35,7 @@ void print_number(int n)
 int length_digit(int digit)
 {
 	int result = 0;
+
 	while (digit != 0)
 	{
 		digit = digit / 10;
