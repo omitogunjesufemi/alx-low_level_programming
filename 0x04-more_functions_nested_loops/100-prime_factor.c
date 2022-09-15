@@ -1,31 +1,54 @@
 #include <stdio.h>
 #include <math.h>
 
-int is_prime(long int n);
+int is_prime(unsigned long long int n);
 /**
  * main - main method
  * Return: 0
  */
 int main(void)
 {
-	long int i;
-	long int test_value = 2081;
+	long long count = 0, sum = 0;
+	long long n = 1200;
 
-	while (test_value > 1)
+	while (n % 2 == 0)
 	{
-		for (i = 0; i < 45; i++)
+		n = n / 2;
+	}
+
+	if (count > 0)
+	{
+		long double result;
+		long double a = (long double) 2;
+		long double b = (long double) count;
+		result = powl(a, b);
+
+		if (sum < result)
+			sum = result;
+	}
+
+	long long i;
+
+	for (i = 3; i <= sqrt(n); i += 2)
+	{
+		count = 0;
+		while (n % i == 0)
 		{
-			if (is_prime(i) == 1)
-			{
-				if (test_value % i == 0)
-				{
-					printf("%ld, ", i);
-					test_value  = test_value / i;
-					break;
-				}
-			}
+			count++;
+			n = n / i;
+		}
+
+		if (count > 0)
+		{
+			long double result;
+			long double a = (long double) i;
+			long double b = (long double) count;
+			result = powl(a, b);
+			if (sum < result)
+				sum = result;
 		}
 	}
+	printf("%lld", sum);
 }
 
 
@@ -34,7 +57,7 @@ int main(void)
  * @n: value to check
  * Return: 0
  */
-int is_prime(long int n)
+int is_prime(unsigned long long int n)
 {
 	int result = 1;
 
@@ -44,7 +67,7 @@ int is_prime(long int n)
 		return (result);
 	}
 
-	int i;
+	unsigned long long int i;
 
 	for (i = 2; i < n; i++)
 	{

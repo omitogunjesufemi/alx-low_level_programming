@@ -17,3 +17,5 @@ TASK | DESCRIPTION
 `8-print_square.c` | This is a function that prints a square, followed by a new line, where `size` is the size of the square.
 `9-fizz_buzz` | This is a program that prints the numbers from `1` to `100`, followed by a new line, but for multiples of three print `Fizz` instead of the number and for the multiples of five prints `Buzz`. For numbers that are multiples of both three and five print `FizzBuzz`.
 `10-print_triangle.c` | This is a function that prints a triangle, followed by a new line, where `size` is the size of the triangle.
+`100-prime-factor.c` | This is a program that finds and prints the largest prime factor of the number `612852475143`, followed by a new line.
+`101-print_number.c` | This is a function that prints an integer.
