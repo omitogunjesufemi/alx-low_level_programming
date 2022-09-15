@@ -53,3 +53,9 @@ void print_line(int n);
  * @n: int
  */
 void print_diagonal(int n);
+
+/**
+ * print_squares - This prints a square
+ * @n: int
+ */
+void print_square(int size);
