@@ -3,7 +3,7 @@
 void print_spaces(int a);
 
 /**
- * print_line - This draws a straight line in the terminal
+ * print_diagonal - This draws a straight line in the terminal
  * @n: int
  */
 void print_diagonal(int n)

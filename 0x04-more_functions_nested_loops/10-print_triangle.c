@@ -37,6 +37,7 @@ void print_hash(int n)
 /**
  * print_space - prints spaces before hash
  * @n: numbers of hash
+ * @size: size of triangle
  */
 void print_space(int n, int size)
 {
