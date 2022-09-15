@@ -47,3 +47,9 @@ void more_numbers(void);
  * @n: int
  */
 void print_line(int n);
+
+/**
+ * print_diagonal - This draws a slant line in the terminal
+ * @n: int
+ */
+void print_diagonal(int n);
