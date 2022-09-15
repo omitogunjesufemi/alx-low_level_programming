@@ -9,6 +9,7 @@ void print_space(int n, int size);
 void print_triangle(int size)
 {
 	int i;
+
 	for (i = 1; i <= size; i++)
 	{
 		print_space(i, size);
@@ -18,6 +19,7 @@ void print_triangle(int size)
 
 	if (size <= 0)
 		_putchar('\n');
+	_putchar('\n');
 }
 
 /**
@@ -40,6 +42,7 @@ void print_hash(int n)
 void print_space(int n, int size)
 {
 	int count = size - n;
+
 	while (count > 0)
 	{
 		_putchar(' ');
