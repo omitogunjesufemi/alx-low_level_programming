@@ -1,6 +1,7 @@
 #include "main.h"
 
 void print_spaces(int a);
+
 /**
  * print_line - This draws a straight line in the terminal
  * @n: int
@@ -30,7 +31,7 @@ void print_diagonal(int n)
  */
 void print_spaces(int a)
 {
-	while (a != 1)
+	while (a > 1)
 	{
 		_putchar(' ');
 		a--;
