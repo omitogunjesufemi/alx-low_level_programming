@@ -59,3 +59,9 @@ void print_diagonal(int n);
  * @n: int
  */
 void print_square(int size);
+
+/**
+ * print_triangle - This prints a triangle
+ * @n: int
+ */
+void print_triangle(int size);
