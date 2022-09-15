@@ -12,3 +12,8 @@ int _isupper(int c);
  * This checks for a digit (0 through 9)
  */
 int _isdigit(int c);
+
+/**
+ * This multiplies two integers
+ */
+int mul(int a, int b);
