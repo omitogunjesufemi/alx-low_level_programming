@@ -9,6 +9,7 @@ long exponential(int power);
 void print_number(int n)
 {
 	long num = n;
+	int last_digit;
 
 	if (num > 9 || num < 0)
 	{
@@ -22,10 +23,9 @@ void print_number(int n)
 			num =  num * -1;
 		}
 
-		for (i = 0; i <= length; i++)
+		for (i = 0; i < length; i++)
 		{
-			int last_digit = (num / multiple) % 10;
-
+			last_digit = (num / multiple) % 10;
 			_putchar(last_digit + '0');
 			multiple = multiple / 10;
 		}
@@ -45,6 +45,11 @@ int length_digit(long digit)
 {
 	int result = 0;
 
+	if (digit < 0)
+	{
+		digit *= -1;
+	}
+
 	while (digit != 0)
 	{
 		digit = digit / 10;
@@ -54,19 +59,19 @@ int length_digit(long digit)
 }
 
 /**
- * exponential - This returns the exponential of a digit
- * @digit: digit to be checked
+ * exponential - This returns the value of 10 raise to a power
  * @power: power
  * Return: int
  */
 long exponential(int power)
 {
-	int i;
+	int i = 1;
 	long result = 1;
 
-	for (i = 0; i < power; i++)
+	while (i < power)
 	{
 		result = result * 10;
+		i++;
 	}
 	return (result);
 }
