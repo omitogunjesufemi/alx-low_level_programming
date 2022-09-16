@@ -1,29 +1,38 @@
 #include "main.h"
 
-int length_digit(int digit);
-int exponential(int digit, int power);
+int length_digit(long digit);
+long exponential(int power);
 /**
  * print_number - This prints the value of an integer
  * @n: value to be printed
  */
 void print_number(int n)
 {
-	if (n > 9 || n < 0)
+	long num = n;
+
+	if (num > 9 || num < 0)
 	{
 		int length = length_digit(n);
+		long multiple = exponential(length);
 		int i;
 
-		for (i = 1; i <= length; i++)
+		if (num < 0)
 		{
-			int last_digit = n % 10;
+			_putchar('-');
+			num =  num * -1;
+		}
 
-			n = n / 10;
+		for (i = 0; i <= length; i++)
+		{
+			int last_digit = (num / multiple) % 10;
+
 			_putchar(last_digit + '0');
+			multiple = multiple / 10;
 		}
 	}
 	else
 	{
-		_putchar(n + '0');
+		_putchar(num + '0');
 	}
 }
 
@@ -32,7 +41,7 @@ void print_number(int n)
  * @digit: digit to be checked
  * Return: int
  */
-int length_digit(int digit)
+int length_digit(long digit)
 {
 	int result = 0;
 
@@ -50,14 +59,14 @@ int length_digit(int digit)
  * @power: power
  * Return: int
  */
-int exponential(int digit, int power)
+long exponential(int power)
 {
 	int i;
-	int result = 1;
+	long result = 1;
 
 	for (i = 0; i < power; i++)
 	{
-		result = result * digit;
+		result = result * 10;
 	}
 	return (result);
 }
