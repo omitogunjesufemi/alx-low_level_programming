@@ -47,3 +47,10 @@ void puts2(char *str);
  * @str: string
  */
 void puts_half(char *str);
+
+/**
+ * print_array - prints n elements of an array of integers
+ * @a: array
+ * @n: number of elements to print
+ */
+void print_array(int *str, int n);
