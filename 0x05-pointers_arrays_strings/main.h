@@ -35,3 +35,9 @@ void print_rev(char *s);
  * @s: string to be reversed
  */
 void rev_string(char *s);
+
+/**
+ * puts2 - print even characters
+ * @str: string
+ */
+void puts2(char *str);
