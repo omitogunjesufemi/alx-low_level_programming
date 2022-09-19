@@ -7,16 +7,16 @@ int str_len(char *m);
  */
 void rev_string(char *s)
 {
-	int i = 0, j = 0;
+	int i = 0;
 	int len = str_len(s);
+	int j = len - 1;
 
-	for (i = len - 1; i > len / 2; i--)
+	for (i = 0; i < len / 2; i++)
 	{
 		char p = s[i];
 
-		s[i] = s[j];
-		s[j] = p;
-		j++;
+		s[i] = s[j - i];
+		s[j - i] = p;
 	}
 }
 
