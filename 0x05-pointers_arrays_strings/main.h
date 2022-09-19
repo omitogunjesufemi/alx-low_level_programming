@@ -41,3 +41,9 @@ void rev_string(char *s);
  * @str: string
  */
 void puts2(char *str);
+
+/**
+ * puts_half - prints half of a string
+ * @str: string
+ */
+void puts_half(char *str);
