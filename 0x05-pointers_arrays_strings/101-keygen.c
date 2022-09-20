@@ -8,16 +8,15 @@
  */
 int main(void)
 {
-	char all_characters[] = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char generated_password[58];
-	int num, i;
+	int num, i, total;
 
 	srand(time(NULL));
-	for (i = 0; i < 58; i++)
+	for (i = 0, total = 2772; total > 122; i++)
 	{
-		num = rand() % 62;
-		generated_password[i] = all_characters[num];
+		num = (rand() % 125) + 1;
+		printf("%c", num);
+		total -= num;
 	}
-	printf("%s\n", generated_password);
+	printf("%c", total);
 	return (0);
 }
