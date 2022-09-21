@@ -20,12 +20,12 @@ char *_strncat(char *dest, char *src, int n);
  * @dest: destination
  * @src: source
  * @n: number of bytes to copy
- * Return: concatenated char
+ * Return: copied char
  */
 char *_strncpy(char *dest, char *src, int n);
 
 /**
- * _strcat - concatenates two strings
+ * _str - concatenates two strings
  * @dest: destination
  * @src: source
  * Return: concatenated char
