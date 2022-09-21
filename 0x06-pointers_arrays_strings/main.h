@@ -25,9 +25,9 @@ char *_strncat(char *dest, char *src, int n);
 char *_strncpy(char *dest, char *src, int n);
 
 /**
- * _str - concatenates two strings
- * @dest: destination
- * @src: source
+ * _strcmp - compare two strings
+ * @s1: string1
+ * @s2: string
  * Return: concatenated char
  */
-char *_strncpy(char *dest, char *src, int n);
+int _strcmp(char *s1, char *s2);
