@@ -2,6 +2,7 @@
  * _strncpy - copies a string
  * @dest: destination
  * @src: source
+ * @n: number of bytes to copy
  * Return: character
  */
 char *_strncpy(char *dest, char *src, int n)
