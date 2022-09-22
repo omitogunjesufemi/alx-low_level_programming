@@ -79,3 +79,13 @@ char *rot13(char *s);
  * @n: integer
  */
 void print_number(int n);
+
+/**
+ * infinite_add - adds two numbers
+ * @n1: first number
+ * @n2: second number
+ * @r: buffer that the function use to store the result
+ * @size_r: buffer size
+ * Return: sum of two numbers
+ */
+char *infinite_add(char *n1, char *n2, char *r, int size_r);
