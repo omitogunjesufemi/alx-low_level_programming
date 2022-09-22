@@ -1,4 +1,11 @@
 /**
+ *_putchar - This is for printing characters
+ * @c: character
+ * Return: int
+ */
+int _putchar(char c);
+
+/**
  * _strcat - concatenates two strings
  * @dest: destination
  * @src: source
@@ -66,3 +73,9 @@ char *leet(char *s);
  * Return: encoded
  */
 char *rot13(char *s);
+
+/**
+ * print_number - prints an integer
+ * @n: integer
+ */
+void print_number(int n);
