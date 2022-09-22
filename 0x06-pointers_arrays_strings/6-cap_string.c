@@ -38,9 +38,9 @@ char *cap_string(char *s)
 int check_separator(char sep)
 {
 	int i;
-	int separator[] = {9, 10, 11, 32, 33, 34, 40, 41, 44, 46, 59, 63, 123, 125};
+	char separator[] = {9, 10, 11, 32, 33, 34, 40, 41, 44, 46, 59, 63, 123, 125};
 
-	for (i = 0; i < 9; i++)
+	for (i = 0; i < 14; i++)
 	{
 		if (sep == separator[i])
 		{
