@@ -89,3 +89,10 @@ void print_number(int n);
  * Return: sum of two numbers
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r);
+
+/**
+ * print_buffer - this prints a buffer
+ * @b: buffer pointer
+ * @size: the size of bytes to the printed
+ */
+void print_buffer(char *b, int size);
