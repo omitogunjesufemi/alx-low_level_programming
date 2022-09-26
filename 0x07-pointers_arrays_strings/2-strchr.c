@@ -8,8 +8,10 @@ char *_strchr(char *s, char c)
 {
 	int length_s, i;
 
+	static char *result = '\0';
+
 	length_s = 0;
-	while(s[length_s] != '\0')
+	while (s[length_s] != '\0')
 	{
 		length_s++;
 	}
@@ -18,8 +20,10 @@ char *_strchr(char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			return (&s[i]);
+			result = &s[i];
+			break;
 		}
 	}
-	return ('\0');
+
+	return (result);
 }
