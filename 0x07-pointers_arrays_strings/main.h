@@ -23,3 +23,11 @@ char *_memcpy(char *dest, char *src , unsigned int n);
  * Return: a pointer to the first occurence of the character
  */
 char *_strchr(char *s, char c);
+
+/**
+ * _strspn - a function that get the length of a prefix substring
+ * @s: string to check
+ * @accept: pattern to use
+ * Return: length of a prefix substring
+ */
+unsigned int _strspn(char *s, char *accept);
