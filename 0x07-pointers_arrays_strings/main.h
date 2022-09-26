@@ -31,3 +31,14 @@ char *_strchr(char *s, char c);
  * Return: length of a prefix substring
  */
 unsigned int _strspn(char *s, char *accept);
+
+/**
+ * _strpbrk - a function that locates the first occurence
+ *            in the string s of any of the bytes in the
+ *            string accept
+ * @s: string
+ * @accept: pattern to use
+ * Return: a pointer to the byte in s that matches one of the bytes
+ *         or return NULL if no such byte is found
+ */
+char *_strpbrk(char *s, char *accept);

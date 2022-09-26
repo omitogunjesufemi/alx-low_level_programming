@@ -1,21 +1,19 @@
-
 int item_exist(char c, char *accept);
 
 /**
- * _strspn - a function that get the length of a prefix substring
- * @s: string to check
+ * _strpbrk - a function that locates the first occurence
+ *            in the string s of any of the bytes in the
+ *            string accept
+ * @s: string
  * @accept: pattern to use
- * Return: length of a prefix substring
+ * Return: a pointer to the byte in s that matches one of the bytes
+ *         or return NULL if no such byte is found
  */
-unsigned int _strspn(char *s, char *accept)
+char *_strpbrk(char *s, char *accept)
 {
-	int length_s, i;
-	int count = 0;
-
-	/**
-	 * Get length of s and accept
-	 */
-	length_s = 0;
+	int i;
+	static char *result = '\0';
+	int length_s = 0;
 
 	while (s[length_s] != '\0')
 	{
@@ -25,12 +23,12 @@ unsigned int _strspn(char *s, char *accept)
 	for (i = 0; i < length_s; i++)
 	{
 		if (item_exist(s[i], accept))
-			count++;
-		else
+		{
+			result = &s[i];
 			break;
+		}
 	}
-
-	return (count);
+	return (result);
 }
 
 /**
