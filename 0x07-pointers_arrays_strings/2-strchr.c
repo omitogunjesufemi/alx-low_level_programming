@@ -7,7 +7,7 @@
 char *_strchr(char *s, char c)
 {
 	int length_s, i;
-	static char *result = 0;
+	static char *result = '\0';
 
 	length_s = 0;
 	while (s[length_s] != '\0')
@@ -15,7 +15,7 @@ char *_strchr(char *s, char c)
 		length_s++;
 	}
 
-	for (i = 0; i < length_s; i++)
+	for (i = 0; i <= length_s; i++)
 	{
 		if (s[i] == c)
 		{
