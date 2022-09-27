@@ -1,3 +1,4 @@
+#include <stddef.h>
 int compare(char *s1, char *s2, int n);
 
 int str_len(char *str);
@@ -30,7 +31,7 @@ char *_strstr(char *haystack, char *needle)
 		 *printf("Value of i: %d\n", i);
 		 */
 
-		if (result == 0 && *haystack == *needle)
+		if (result == 0)
 		{
 			return (haystack);
 		}
@@ -38,7 +39,8 @@ char *_strstr(char *haystack, char *needle)
 		haystack++;
 		/*printf("After: %p\n", haystack);*/
 	}
-	return (haystack);
+
+	return NULL;
 }
 
 
