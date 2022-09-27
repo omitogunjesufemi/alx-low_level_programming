@@ -40,7 +40,7 @@ char *_strstr(char *haystack, char *needle)
 		/*printf("After: %p\n", haystack);*/
 	}
 
-	return NULL;
+	return (NULL);
 }
 
 
