@@ -1,4 +1,5 @@
 #include <stddef.h>
+
 int compare(char *s1, char *s2, int n);
 
 int str_len(char *str);
