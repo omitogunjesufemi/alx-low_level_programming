@@ -48,3 +48,11 @@ char *_strpbrk(char *s, char *accept);
  * @a: array
  */
 void print_chessboard(char (*a)[8]);
+
+/**
+ * print_diagsums - prints the sum of the two diagonals
+ * of a square matrix of integers
+ * @a: the square matrix
+ * @size: size of the matrix [row][col]
+ */
+void print_diagsums(int *a, int size);
