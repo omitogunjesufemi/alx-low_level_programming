@@ -42,3 +42,9 @@ unsigned int _strspn(char *s, char *accept);
  *         or return NULL if no such byte is found
  */
 char *_strpbrk(char *s, char *accept);
+
+/**
+ * print_chessboard - a function that prints the chessboard
+ * @a: array
+ */
+void print_chessboard(char (*a)[8]);
