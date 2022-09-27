@@ -44,6 +44,14 @@ unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 
 /**
+ * _strstr - a function that locates a substring
+ * @haystack: the main string
+ * @needle: the pattern
+ * Return: a pointer to the beginning byte of the substring
+ */
+char *_strstr(char *haystack, char *needle);
+
+/**
  * print_chessboard - a function that prints the chessboard
  * @a: array
  */
@@ -56,3 +64,10 @@ void print_chessboard(char (*a)[8]);
  * @size: size of the matrix [row][col]
  */
 void print_diagsums(int *a, int size);
+
+/**
+ * set_string - sets the value of a pointer to a char
+ * @s: the pointer to a pointer
+ * @to: a pointer to the value
+ */
+void set_string(char **s, char *to);
