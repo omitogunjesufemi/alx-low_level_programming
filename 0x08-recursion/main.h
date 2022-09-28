@@ -24,3 +24,11 @@ int _strlen_recursion(char *s);
  * Return: factorial of the number
  */
 int factorial(int n);
+
+/**
+ * _pow_recursion - returns the value of x raised to the power of y
+ * @x: the base
+ * @y: the power
+ * Return: raised value or error
+ */
+int _pow_recursion(int x, int y);
