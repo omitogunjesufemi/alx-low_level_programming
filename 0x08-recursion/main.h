@@ -17,3 +17,10 @@ void _print_rev_recursion(char *s);
  * Return: int
  */
 int _strlen_recursion(char *s);
+
+/**
+ * factorial - a function that returns the factorial of a number
+ * @n: the number
+ * Return: factorial of the number
+ */
+int factorial(int n);
