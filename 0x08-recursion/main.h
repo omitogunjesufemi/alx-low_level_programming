@@ -10,3 +10,10 @@ void _puts_recursion(char *s);
  * @s: string to print
  */
 void _print_rev_recursion(char *s);
+
+/**
+ * _strlen_recursion - a function that returns the length of a string
+ * @s: string to check
+ * Return: int
+ */
+int _strlen_recursion(char *s);
