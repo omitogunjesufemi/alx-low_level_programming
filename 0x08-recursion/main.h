@@ -39,3 +39,10 @@ int _pow_recursion(int x, int y);
  * Return: the square root of the number
  */
 int _sqrt_recursion(int n);
+
+/**
+ * is_prime_number - returns 1 if the input integer is a prime number
+ * @n: input integer
+ * Return: 1 if prime, and 0 if not
+ */
+int is_prime_number(int n);
