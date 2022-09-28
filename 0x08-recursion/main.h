@@ -32,3 +32,10 @@ int factorial(int n);
  * Return: raised value or error
  */
 int _pow_recursion(int x, int y);
+
+/**
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: the number
+ * Return: the square root of the number
+ */
+int _sqrt_recursion(int n);
