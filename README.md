@@ -8,6 +8,9 @@ This repository contains programs written for the low-level programming at ALX. 
 * [0x03. C - Debugging](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/master/0x03-debugging)
 * [0x04. C - More functions, more nested loops](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/master/0x04-more_functions_nested_loops)
 * [0x05. C - Pointers, arrays and strings](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/master/0x05-pointers_arrays_strings)
+* [0x06. C - More pointers, arrays and strings](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/08a823c098d554f61d5e5ed6348a1852a8d5f751/0x06-pointers_arrays_strings)
+* [0x07. C - Even more pointers, arrays and strings](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/08a823c098d554f61d5e5ed6348a1852a8d5f751/0x07-pointers_arrays_strings)
+* [0x08. C - Recursion]()
 
 # Author
 * Jesufemi Omitogun - [omitogunjesufemi](https://github.com/omitogunjesufemi)
