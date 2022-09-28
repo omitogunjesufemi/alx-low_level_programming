@@ -2,6 +2,8 @@
  * check - check if prime
  * @number: the number to check if prime
  * @factor: the factors to divide number by
+ * @count: the number of times there is a perfect division
+ * of number and factor
  * Return: 1 or 0
  */
 int check(int number, int factor, int count)
