@@ -6,23 +6,26 @@
  * of number and factor
  * Return: 1 or 0
  */
-int check(int number, int factor, int count)
+int check(int number, int factor)
 {
 	if (number <= 1)
 		return (0);
 
+	if (number == 2 || number == 3)
+		return (1);
+
 	if (number % 2 == 0)
 		return (0);
 
-	if (number % factor == 0)
-	{
-		count++;
+	if (number % factor && number ==  factor)
+		return (1);
 
-		if (count == 2)
-			return (1);
+	if (factor >= number / 2)
+	{
+		return (1);
 	}
 
-	return (check(number, factor + 1, count));
+	return (check(number, factor + 1));
 }
 
 
@@ -33,5 +36,5 @@ int check(int number, int factor, int count)
  */
 int is_prime_number(int n)
 {
-	return (check(n, 1, 0));
+	return (check(n, 1));
 }

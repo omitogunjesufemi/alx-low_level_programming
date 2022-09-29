@@ -53,3 +53,11 @@ int is_prime_number(int n);
  * Return: 1 if true, and 0 if false
  */
 int is_palindrome(char *s);
+
+/**
+ * wildcmp - compares two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: 1 if they can be considered identical, or 0 if otherwise
+ */
+int wildcmp(char *s1, char *s2);
