@@ -46,3 +46,10 @@ int _sqrt_recursion(int n);
  * Return: 1 if prime, and 0 if not
  */
 int is_prime_number(int n);
+
+/**
+ * is_palindrome - checks if palindrome
+ * @s: the string
+ * Return: 1 if true, and 0 if false
+ */
+int is_palindrome(char *s);
