@@ -1,6 +1,6 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
-
+#include <stdlib.h>
 /**
  *_putchar - This is for printing characters
  * @c: character
@@ -16,5 +16,13 @@ int _putchar(char c);
  * Return: pointer to the array created
  */
 char *create_array(unsigned int size, char c);
+
+/**
+ * _strdup - function that returns a pointer to
+ * a newly allocated space in memory
+ * @str: string given as parameter
+ * Return: pointer to the duplicate of the string
+ */
+char *_strdup(char *str);
 
 #endif
