@@ -1,6 +1,7 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
 #include <stdlib.h>
+#include <string.h>
 /**
  *_putchar - This is for printing characters
  * @c: character
@@ -25,4 +26,11 @@ char *create_array(unsigned int size, char c);
  */
 char *_strdup(char *str);
 
+/**
+ * str_concat -  a function that concatenates two strings
+ * @s1: first string
+ * @s2: second string
+ * Return: pointer to concatenated string
+ */
+char *str_concat(char *s1, char *s2);
 #endif
