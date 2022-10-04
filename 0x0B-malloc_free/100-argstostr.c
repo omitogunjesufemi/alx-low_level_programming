@@ -19,6 +19,7 @@ char *argstostr(int ac, char **av)
 
 	ptr = malloc((total_len - ac - 2));
 
+	free(ptr);
 	if (ptr == NULL)
 		return (NULL);
 
@@ -27,7 +28,5 @@ char *argstostr(int ac, char **av)
 		strcat(ptr, av[i]);
 		strcat(ptr, "\n");
 	}
-
-	free(ptr);
 	return (ptr);
 }
