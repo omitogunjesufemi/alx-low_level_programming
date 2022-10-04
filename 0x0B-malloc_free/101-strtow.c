@@ -18,6 +18,9 @@ char **strtow(char *str)
 	substring_count = sub_count(str);
 	str_len = strlen(str);
 
+	if (str == NULL || *str == '\0' || substring_count < 1)
+		return (NULL);
+
 	ptr = malloc(substring_count * sizeof(char *));
 
 	if (ptr == NULL)
@@ -36,6 +39,9 @@ char **strtow(char *str)
 			i++;
 		}
 
+		/**
+		 * Where a temp is used to store substrings
+		 */
 		j = 0;
 		while (i < str_len)
 		{
@@ -48,17 +54,24 @@ char **strtow(char *str)
 			j++;
 		}
 
+		/**
+		 * Where the buffer is used to populate the double
+		 * pointer to be returned
+		 */
 		if (j > 0)
 		{
 			buffer[j] = '\0';
 
 			ptr[str_index] = malloc(1 + strlen(buffer) * sizeof(char));
 
+			/**
+			 * Freeing the allocated memory
+			 */
 			if (ptr[str_index] == NULL)
 			{
 				for (k = 0; k < substring_count; k++)
 				{
-					free(ptr[str_index]);
+					free(ptr[k]);
 				}
 				free(ptr);
 			}
@@ -115,10 +128,13 @@ int sub_count(char *str)
  */
 void _strcpy(char *dest, char *src)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; src[i] != '\0'; i++)
+	while (src[i] != '\0')
 	{
 		dest[i] = src[i];
+		i++;
 	}
+
+	dest[i] = '\0';
 }
