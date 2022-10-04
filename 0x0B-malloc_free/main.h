@@ -1,5 +1,6 @@
 #ifndef _MAIN_H_
 #define _MAIN_H_
+
 #include <stdlib.h>
 #include <string.h>
 /**
@@ -49,4 +50,11 @@ int **alloc_grid(int width, int height);
  */
 void free_grid(int **grid, int height);
 
+/**
+ * argstostr - concatenates arguments to string
+ * @ac: argument count
+ * @av: arguments
+ * Return: pointer to concatenated string
+ */
+char *argstostr(int ac, char **av);
 #endif
