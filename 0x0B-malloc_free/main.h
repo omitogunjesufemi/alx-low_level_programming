@@ -57,4 +57,11 @@ void free_grid(int **grid, int height);
  * Return: pointer to concatenated string
  */
 char *argstostr(int ac, char **av);
+
+/**
+ * strtow - splits a string into words
+ * @str: string
+ * Return: pointer to string array
+ */
+char **strtow(char *str);
 #endif
