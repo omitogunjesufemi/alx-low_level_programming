@@ -42,4 +42,11 @@ char *str_concat(char *s1, char *s2);
  */
 int **alloc_grid(int width, int height);
 
+/**
+ * free_grid - a function that frees a 2D array
+ * @grid: the 2D array
+ * @height: the row of the array
+ */
+void free_grid(int **grid, int height);
+
 #endif
