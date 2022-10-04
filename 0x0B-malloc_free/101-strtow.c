@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 int sub_count(char *str);
 void _strcpy(char *dest, char *src);
@@ -21,7 +20,7 @@ char **strtow(char *str)
 	if (str == NULL || *str == '\0' || substring_count < 1)
 		return (NULL);
 
-	ptr = malloc(substring_count * sizeof(char *));
+	ptr = malloc((1 + substring_count) * sizeof(char *));
 
 	if (ptr == NULL)
 	{
@@ -62,7 +61,7 @@ char **strtow(char *str)
 		{
 			buffer[j] = '\0';
 
-			ptr[str_index] = malloc(1 + strlen(buffer) * sizeof(char));
+			ptr[str_index] = malloc(strlen(buffer) * sizeof(char));
 
 			/**
 			 * Freeing the allocated memory
@@ -76,7 +75,8 @@ char **strtow(char *str)
 				free(ptr);
 			}
 
-			_strcpy(ptr[str_index], buffer);
+			if (buffer != NULL || buffer != '\0')
+				strcpy(ptr[str_index], buffer);
 
 			str_index++;
 		}
@@ -110,7 +110,9 @@ int sub_count(char *str)
 		while (i < str_len)
 		{
 			if (str[i] == ' ')
+			{
 				break;
+			}
 			i++;
 		}
 
