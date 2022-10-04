@@ -25,8 +25,11 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		strcat(ptr, av[i]);
-		strcat(ptr, "\n");
+		if (av[i] != '\0')
+		{
+			strcat(ptr, av[i]);
+			strcat(ptr, "\n");
+		}
 	}
 	return (ptr);
 }
