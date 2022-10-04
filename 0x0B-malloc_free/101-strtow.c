@@ -61,7 +61,7 @@ char **strtow(char *str)
 		{
 			buffer[j] = '\0';
 
-			ptr[str_index] = malloc(strlen(buffer) * sizeof(char));
+			ptr[str_index] = malloc((1 + strlen(buffer)) * sizeof(char));
 
 			/**
 			 * Freeing the allocated memory
