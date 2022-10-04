@@ -8,8 +8,10 @@
  */
 char *argstostr(int ac, char **av)
 {
-	int i, total_len;
+	int i, j, k, total_len;
 	char *ptr;
+
+	k = 0;
 
 	if (ac == 0)
 		return (NULL);
@@ -25,11 +27,14 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		if (*(av[i]) != '\0')
+		for (j = 0; *(*(av + i) + j) != '\0'; j++)
 		{
-			strcat(ptr, av[i]);
-			strcat(ptr, "\n");
+			ptr[k] = *(*(av + i) + j);
+			k++;
 		}
+		ptr[k] = '\n';
+		k++;
 	}
+	ptr[k] = '\0';
 	return (ptr);
 }
