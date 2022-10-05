@@ -10,7 +10,10 @@ This repository contains programs written for the low-level programming at ALX. 
 * [0x05. C - Pointers, arrays and strings](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/master/0x05-pointers_arrays_strings)
 * [0x06. C - More pointers, arrays and strings](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/08a823c098d554f61d5e5ed6348a1852a8d5f751/0x06-pointers_arrays_strings)
 * [0x07. C - Even more pointers, arrays and strings](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/08a823c098d554f61d5e5ed6348a1852a8d5f751/0x07-pointers_arrays_strings)
-* [0x08. C - Recursion]()
+* [0x08. C - Recursion](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/master/0x08-recursion)
+* [0x09. C - Static Libraries](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/master/0x09-static_libraries)
+* [0x0A. C - argc, argv](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/master/0x0A-argc_argv)
+* [0x0B. C - malloc, free](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/master/0x0B-malloc_free)
 
 # Author
 * Jesufemi Omitogun - [omitogunjesufemi](https://github.com/omitogunjesufemi)
