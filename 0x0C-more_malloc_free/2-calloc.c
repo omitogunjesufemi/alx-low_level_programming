@@ -34,13 +34,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
  */
 void *_memset(void *s, int b, unsigned int n)
 {
-	char *p;
+	unsigned char *p;
 	unsigned int i;
 
 	p = s;
 	for (i = 0; i < n; i++)
 	{
-		p[i] = b;
+		p[i] = (unsigned char) b;
 	}
 	return (s);
 }
