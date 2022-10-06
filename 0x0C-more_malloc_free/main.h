@@ -5,6 +5,13 @@
 #include <string.h>
 
 /**
+ *_putchar - This is for printing characters
+ * @c: character
+ * Return: int
+ */
+int _putchar(char c);
+
+/**
  * malloc_checked - allocates memory using malloc
  * @b: the size of memory to allocate
  * Return: a pointer to the allocated memory
