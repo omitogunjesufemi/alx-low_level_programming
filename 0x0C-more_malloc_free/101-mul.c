@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 
-long int string_to_integer(char *s, long unsigned int length);
-long unsigned int power_of_10(long unsigned int n);
+long int string_to_integer(char *s, unsigned int long length);
+unsigned int long power_of_10(unsigned int long n);
 int not_digit(char *s);
-long unsigned int str_len(char *s);
+unsigned int long str_len(char *s);
 void print_string(char *s);
 int length_digit(int digit);
 int exponential(int power);
@@ -12,6 +12,8 @@ void print_int(long int n);
 
 /**
  * main - main method
+ * @argc: argument count
+ * @argv: arguments
  * Return: always 1
  */
 int main(int argc, char **argv)
@@ -20,8 +22,9 @@ int main(int argc, char **argv)
 	char *s2;
 	long int value1;
 	long int value2;
-	long unsigned int len1;
-	long unsigned int len2;
+
+	unsigned int long len1;
+	unsigned int long len2;
 
 	if (argc != 3)
 	{
@@ -56,8 +59,11 @@ int main(int argc, char **argv)
 void print_string(char *s)
 {
 	int i;
+
 	for (i = 0; s[i] != '\0'; i++)
+	{
 		_putchar(s[i]);
+	}
 	_putchar('\n');
 }
 
@@ -67,9 +73,9 @@ void print_string(char *s)
  * @length: length of string
  * Return: the integer value
  */
-long int string_to_integer(char *s, long unsigned int length)
+long int string_to_integer(char *s, unsigned int long length)
 {
-	long unsigned int i, power;
+	unsigned int long i, power;
 	int normal_value;
 	long int sum;
 
@@ -107,7 +113,7 @@ int not_digit(char *s)
  * @n: the power that 10 is raised to
  * Return: the value of the raised power
  */
-long unsigned int power_of_10( long unsigned int n)
+unsigned int long power_of_10(unsigned int long n)
 {
 	if (n <= 0)
 		return (1);
@@ -119,9 +125,9 @@ long unsigned int power_of_10( long unsigned int n)
  * @s: the string
  * Return: length of the string
  */
-long unsigned int str_len(char *s)
+unsigned int long str_len(char *s)
 {
-	long unsigned int i;
+	unsigned int long i;
 
 	i = 0;
 	while (s[i] != '\0')
