@@ -2,7 +2,6 @@
 #define _MAIN_H_
 
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * malloc_checked - allocates memory using malloc
