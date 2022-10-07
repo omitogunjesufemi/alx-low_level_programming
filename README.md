@@ -14,6 +14,7 @@ This repository contains programs written for the low-level programming at ALX. 
 * [0x09. C - Static Libraries](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/master/0x09-static_libraries)
 * [0x0A. C - argc, argv](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/master/0x0A-argc_argv)
 * [0x0B. C - malloc, free](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/master/0x0B-malloc_free)
+* [0x0C. C - More malloc, free](https://github.com/omitogunjesufemi/alx-low_level_programming/tree/master/0x0C-more_malloc_free)
 
 # Author
 * Jesufemi Omitogun - [omitogunjesufemi](https://github.com/omitogunjesufemi)
