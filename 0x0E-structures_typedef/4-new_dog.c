@@ -14,11 +14,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_ptr = malloc(sizeof(dog_t));
 
 	if (dog_ptr == NULL)
+	{
+		free(dog_ptr);
 		return (NULL);
+	}
 
 	dog_ptr->name = name;
 	dog_ptr->age = age;
 	dog_ptr->owner = owner;
-
 	return (dog_ptr);
 }
