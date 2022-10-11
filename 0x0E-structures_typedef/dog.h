@@ -18,6 +18,11 @@ struct dog
 };
 
 /**
+ * dog_t - new name for struct dog
+ */
+typedef struct dog dog_t;
+
+/**
  * init_dog - initializes a variable of type struct dog
  * @d: dog struct
  * @name: dog name
