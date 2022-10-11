@@ -60,7 +60,7 @@ char *str_cpy(char *dest, char *src)
 	{
 		dest[i] = src[i];
 	}
-	dest[-1] = '\0';
+	dest[len] = '\0';
 
 	return (dest);
 }
