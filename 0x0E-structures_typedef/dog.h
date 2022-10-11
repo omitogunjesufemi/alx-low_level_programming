@@ -47,4 +47,10 @@ void print_dog(struct dog *d);
  */
 dog_t *new_dog(char *name, float age, char *owner);
 
+/**
+ * free_dog - frees the memory allocated to dog and its elements
+ * @d: the struct dog
+ */
+void free_dog(dog_t *d);
+
 #endif
