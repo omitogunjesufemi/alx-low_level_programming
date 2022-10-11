@@ -38,9 +38,17 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
+	/**
+	 * Storing name and owner in allocated spaces
+	 */
 	str_cpy(dog_ptr->name, name);
 	dog_ptr->age = age;
 	str_cpy(dog_ptr->owner, owner);
+
+	/**
+	 * Freeing the memory
+	 */
+
 	return (dog_ptr);
 }
 
