@@ -11,7 +11,6 @@ int main(int argc, char **argv)
 {
 	int i;
 	char *ptr;
-	int n = atoi(argv[1]);
 
 	if (argc != 2)
 	{
@@ -19,13 +18,15 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 
+	int n = atoi(argv[1]);
+
 	if (n < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
 
-	ptr = (char *) &main;
+	ptr = (char *) main;
 
 	for (i = 0; i < n; i++)
 	{
