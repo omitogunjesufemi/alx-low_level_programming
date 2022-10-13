@@ -30,4 +30,9 @@ void print_numbers(const char *separator, const unsigned int n, ...);
  */
 void print_strings(const char *separator, const unsigned int n, ...);
 
+/**
+ * print_all - prints anything
+ * @format: the list of types of arguments passed to the function
+ */
+void print_all(const char * const format, ...);
 #endif
