@@ -1,5 +1,6 @@
 #include "3-calc.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
  * main - main method
@@ -13,19 +14,19 @@ int main(int argc, char **argv)
 	char *operator;
 	int a, b, result;
 
-	a = atoi(argv[1]);
-	operator = argv[2];
-	b = atoi(argv[3]);
-
-	calculator = get_op_func(operator);
-
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
 
-	if (!calculator)
+	a = atoi(argv[1]);
+	operator = argv[2];
+	b = atoi(argv[3]);
+
+	calculator = get_op_func(operator);
+
+	if (!calculator || strlen(argv[2]) != 1)
 	{
 		printf("Error\n");
 		exit(99);
