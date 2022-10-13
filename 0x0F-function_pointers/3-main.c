@@ -31,7 +31,7 @@ int main(int argc, char **argv)
 		exit(99);
 	}
 
-	if (b == 0)
+	if ((operator[0] - '/' == 0 || operator[0] - '%' == 0) && b == 0)
 	{
 		printf("Error\n");
 		exit(100);
