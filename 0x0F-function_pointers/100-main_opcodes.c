@@ -10,7 +10,7 @@
 int main(int argc, char **argv)
 {
 	int i;
-	char *ptr;
+	unsigned char *ptr;
 
 	if (argc != 2)
 	{
@@ -26,14 +26,14 @@ int main(int argc, char **argv)
 		exit(2);
 	}
 
-	ptr = (char *) main;
+	ptr = (unsigned char *) main;
 
 	for (i = 0; i < n; i++)
 	{
 		if (i != n - 1)
-			printf("%.2hhx ", ptr[i]);
+			printf("%.2x ", ptr[i]);
 		else
-			printf("%.2hhx", ptr[i]);
+			printf("%.2x", ptr[i]);
 	}
 	printf("\n");
 
