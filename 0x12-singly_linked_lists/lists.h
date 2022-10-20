@@ -32,4 +32,12 @@ int _putchar(char c);
  * Return: number of nodes
  */
 size_t print_list(const list_t *h);
+
+/**
+ * list_len - Gets the number of elements in a linked list_t list
+ * @h: The list_t list
+ * Return: The number of elements
+ */
+size_t list_len(const list_t *h);
+
 #endif
