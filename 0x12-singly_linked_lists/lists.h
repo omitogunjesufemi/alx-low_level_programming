@@ -56,4 +56,10 @@ list_t *add_node(list_t **head, const char *str);
  */
 list_t *add_node_end(list_t **head, const char *str);
 
+/**
+ * free_list - Free the mallod'ed space of linked list
+ * @head: the head pointer to the first node
+ */
+void free_list(list_t *head);
+
 #endif
