@@ -25,4 +25,11 @@ typedef struct listint_s
  */
 int _putchar(char c);
 
+/**
+ * print_listint - Prints all the elements of a listint_t list
+ * @h: listint_t list
+ * Return: number of nodes
+ */
+size_t print_listint(const listint_t *h);
+
 #endif
