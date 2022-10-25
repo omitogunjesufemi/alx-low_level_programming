@@ -74,4 +74,12 @@ void free_listint2(listint_t **head);
  */
 int pop_listint(listint_t **head);
 
+/**
+ * get_nodeint_at_index - Returns the nth node of a list
+ * @head: head node
+ * @index: index of the node starting at 0
+ * Return: the nth node of a list or NULL if node does not exist.
+ */
+listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
+
 #endif
