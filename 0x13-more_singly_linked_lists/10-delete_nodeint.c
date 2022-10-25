@@ -49,6 +49,11 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	return (-1);
 }
 
+/**
+ * list_len - Determines the number of elements in a linked list
+ * @list: linked list
+ * Return: number of elements
+ */
 unsigned int list_len(listint_t *list)
 {
 	unsigned int count;
