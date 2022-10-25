@@ -1,5 +1,6 @@
 #include "lists.h"
 
+unsigned int list_len(listint_t *list);
 /**
  * insert_nodeint_at_index - Inserts a new node at a given position
  * @head: the address of the head node
@@ -26,12 +27,12 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 			new_node->next = current, *head = new_node;
 			return (new_node);
 		}
-		while (i < idx)
+		while (i < idx && idx <= list_len(*head))
 		{
 			prev = current, current = current->next;
 			i++;
 		}
-		if (i == idx)
+		if (i == idx && idx <= list_len(*head))
 		{
 			new_node->next = current, prev->next = new_node;
 			return (new_node);
@@ -49,4 +50,25 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	}
 	free(new_node);
 	return (NULL);
+}
+
+/**
+ * list_len - Determines the number of elements in a linked list
+ * @list: linked list
+ * Return: number of elements
+ */
+unsigned int list_len(listint_t *list)
+{
+	listint_t *ptr;
+	unsigned int i;
+
+	i = 0;
+	ptr = list;
+	while (ptr != NULL)
+	{
+		i++;
+		ptr = ptr->next;
+	}
+
+	return (i);
 }
