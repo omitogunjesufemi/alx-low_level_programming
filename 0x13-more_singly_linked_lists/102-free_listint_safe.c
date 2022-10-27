@@ -25,6 +25,8 @@ size_t free_listint_safe(listint_t **head)
 			temp = *head;
 			(*head)->next = NULL;
 			free(temp);
+			*head = NULL;
+			return (1);
 		}
 
 		ptr = *head;
@@ -63,6 +65,7 @@ size_t free_listint_safe(listint_t **head)
 			printf("This is read\n");
 		}
 
+		*head = NULL;
 		return (count);
 	}
 
