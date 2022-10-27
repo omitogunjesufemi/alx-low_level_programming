@@ -1,6 +1,5 @@
 #include "lists.h"
 
-
 int first_meeting(const listint_t **hare,
 		  const listint_t **tortoise,
 		  const listint_t **head, size_t *i);
@@ -19,9 +18,15 @@ size_t print_listint_safe(const listint_t *head)
 	int have_met;
 
 	i = 0;
-
 	if (head != NULL)
 	{
+		if (head->next == head)
+		{
+			printf("[%p] %d\n", (void *) head, head->n);
+			printf("-> [%p] %d\n", (void *) head, head->n);
+			return (1);
+		}
+
 		ptr = head;
 		tortoise = head->next;
 		hare = (head->next)->next;
@@ -84,6 +89,7 @@ listint_t *get_cyclic_entry_point(const listint_t **hare,
  * @hare: the fast pointer
  * @tortoise: the slow pointer
  * @head: copy of head pointer
+ * @i: the count for nodes
  * Return: 1 if they met, and 0 if they didn't
  */
 int first_meeting(const listint_t **hare,
