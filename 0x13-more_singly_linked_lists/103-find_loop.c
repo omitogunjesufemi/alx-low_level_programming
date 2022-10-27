@@ -37,6 +37,12 @@ listint_t *find_listint_loop(listint_t *head)
 	return (NULL);
 }
 
+/**
+ * get_loop_entry_point - Gets the entry point for the loop
+ * @slow_ptr: the slower pointer
+ * @fast_ptr: the faster pointer
+ * Return: the entry point
+ */
 listint_t *get_loop_entry_point(listint_t **slow_ptr, listint_t **fast_ptr)
 {
 	while (*slow_ptr != *fast_ptr)
@@ -48,7 +54,13 @@ listint_t *get_loop_entry_point(listint_t **slow_ptr, listint_t **fast_ptr)
 	return (*slow_ptr);
 }
 
-
+/**
+ * check_first_meeting - Iteration for the first meeting of the fast and
+ * slow pointer
+ * @slow_ptr: the slower pointer
+ * @fast_ptr: the faster pointer
+ * Return: 1 if they meet, and 0 if they don't
+ */
 int check_first_meeting(listint_t **slow_ptr, listint_t **fast_ptr)
 {
 	while (*fast_ptr != NULL && (*fast_ptr)->next != NULL)
