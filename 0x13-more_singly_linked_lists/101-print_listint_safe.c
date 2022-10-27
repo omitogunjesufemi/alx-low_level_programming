@@ -3,7 +3,7 @@
 
 int first_meeting(const listint_t **hare,
 		  const listint_t **tortoise,
-		  const listint_t **head);
+		  const listint_t **head, size_t *i);
 listint_t *get_cyclic_entry_point(const listint_t **hare,
 				  const listint_t **tortoise,
 				  int have_met);
@@ -19,34 +19,39 @@ size_t print_listint_safe(const listint_t *head)
 	int have_met;
 
 	i = 0;
-	ptr = head;
-	tortoise = head->next;
-	hare = (head->next)->next;
 
-	have_met = first_meeting(&hare, &tortoise, &ptr);
-	tortoise = head;
-	tortoise = (const listint_t *)get_cyclic_entry_point(&hare, &tortoise,
-							     have_met);
-
-	if (have_met == 0)
+	if (head != NULL)
 	{
-		while (ptr != NULL)
+		ptr = head;
+		tortoise = head->next;
+		hare = (head->next)->next;
+
+		have_met = first_meeting(&hare, &tortoise, &ptr, &i);
+		tortoise = head;
+		tortoise = (const listint_t *)get_cyclic_entry_point(&hare,
+								     &tortoise,
+								     have_met);
+
+		if (have_met == 0)
 		{
-			printf("[%p] %d\n", (void *) ptr, ptr->n);
-			ptr = ptr->next;
+			while (ptr != NULL)
+			{
+				printf("[%p] %d\n", (void *) ptr, ptr->n);
+				ptr = ptr->next;
+				i++;
+			}
+		}
+		else
+		{
+			while (ptr != tortoise)
+			{
+				printf("[%p] %d\n", (void *) ptr, ptr->n);
+				ptr = ptr->next;
+				i++;
+			}
+			printf("-> [%p] %d\n", (void *) tortoise, tortoise->n);
 		}
 	}
-	else
-	{
-		while (ptr != tortoise)
-		{
-			printf("[%p] %d\n", (void *) ptr, ptr->n);
-			ptr = ptr->next;
-		}
-		printf("-> [%p] %d\n", (void *) tortoise, tortoise->n);
-	}
-
-
 	return (i);
 }
 
@@ -83,7 +88,7 @@ listint_t *get_cyclic_entry_point(const listint_t **hare,
  */
 int first_meeting(const listint_t **hare,
 		  const listint_t **tortoise,
-		  const listint_t **head)
+		  const listint_t **head, size_t *i)
 {
 	while (*hare && (*hare)->next)
 	{
@@ -93,6 +98,7 @@ int first_meeting(const listint_t **hare,
 			*hare = ((*hare)->next)->next;
 			printf("[%p] %d\n", (void *) *head, (*head)->n);
 			*head = (*head)->next;
+			*i = *i + 1;
 		}
 
 		if (*tortoise == *hare)
