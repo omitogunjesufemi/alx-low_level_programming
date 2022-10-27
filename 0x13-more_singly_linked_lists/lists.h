@@ -120,4 +120,11 @@ listint_t *reverse_listint(listint_t **head);
  */
 size_t print_listint_safe(const listint_t *head);
 
+/**
+ * free_listint_safe - This frees a listint_t list
+ * @head: address to the pointer of head node
+ * Return: the size of the list that was free'd
+ */
+size_t free_listint_safe(listint_t **head);
+
 #endif
