@@ -36,7 +36,6 @@ size_t print_listint_safe(const listint_t *head)
 		tortoise = (const listint_t *)get_cyclic_entry_point(&hare,
 								     &tortoise,
 								     have_met);
-
 		if (have_met == 0)
 		{
 			while (ptr != NULL)
@@ -109,6 +108,9 @@ int first_meeting(const listint_t **hare,
 
 		if (*tortoise == *hare)
 		{
+			printf("[%p] %d\n", (void *) *head, (*head)->n);
+			*head = (*head)->next;
+			*i = *i + 1;
 			return (1);
 		}
 	}
