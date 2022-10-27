@@ -62,7 +62,6 @@ size_t free_listint_safe(listint_t **head)
 			temp = ptr;
 			ptr = ptr->next;
 			free(temp);
-			printf("This is read\n");
 		}
 
 		*head = NULL;
@@ -83,12 +82,6 @@ listint_t *get_entry_point(listint_t **hare,
 			*tortoise = (*tortoise)->next;
 			*hare = (*hare)->next;
 		}
-
-		printf("This is a cyclic linked list\n");
-	}
-	else
-	{
-		printf("This is NOT a cyclic linked list\n");
 	}
 
 	return (*tortoise);
