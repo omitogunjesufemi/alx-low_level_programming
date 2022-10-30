@@ -64,7 +64,7 @@ unsigned int power_of_two(int y)
 {
 	if (y == 0)
 		return (1);
-	return (2 * power(y - 1));
+	return (2 * power_of_two(y - 1));
 }
 
 /**
