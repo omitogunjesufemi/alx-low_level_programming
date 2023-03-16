@@ -35,4 +35,11 @@ size_t print_dlistint(const dlistint_t *h);
  */
 size_t dlistint_len(const dlistint_t *h);
 
+/**
+ * add_nodeint - Adds a new node at the beginning of a list
+ * @head: Head pointer
+ * @n: The integer data
+ */
+dlistint_t *add_dnodeint(dlistint_t **head, const int n);
+
 #endif
