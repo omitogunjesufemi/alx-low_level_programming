@@ -64,4 +64,11 @@ void free_dlistint(dlistint_t *head);
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
 
+/**
+ * sum_dlistint - Sum of all the data (n) of a linked list
+ * @head: Head pointer
+ * Return: Sum of all the data (n), and 0 if list is empty
+ */
+int sum_dlistint(dlistint_t *head);
+
 #endif
