@@ -71,4 +71,20 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);
  */
 int sum_dlistint(dlistint_t *head);
 
+/**
+ * insert_dnodeint_at_index - Inserts a new node at a given position
+ * @h: Pointer to Head pointer
+ * @idx: index of the list where the new node should be added. Index starts at 0
+ * @n: The data for the node to be added
+ * Return: the address of the new node, or NULL if it failed
+ */
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
+
+/**
+ * list_len - Returns the total number of nodes in linked list
+ * @list: Head pointer
+ * Return: totals nodes present
+ */
+unsigned int list_len(dlistint_t *list);
+
 #endif
