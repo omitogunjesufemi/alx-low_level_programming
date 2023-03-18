@@ -8,4 +8,4 @@ main:
 	call printf
 
 	section .data
-message: 	db	"Hello, Hoberton", 10
+message: 	db	"Hello, Hoberton ", 10
