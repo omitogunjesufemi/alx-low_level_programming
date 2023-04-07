@@ -87,4 +87,11 @@ hash_node_t *create_node(const char *key, const char *value);
  */
 char *hash_table_get(const hash_table_t *ht, const char *key);
 
+/**
+ * hash_table_print - Prints a hash table
+ * @ht: Hash table
+ * The hash is printed in the order they appear in the array of hash table
+ */
+void hash_table_print(const hash_table_t *ht);
+
 #endif /*_HASH_TABLES_*/
