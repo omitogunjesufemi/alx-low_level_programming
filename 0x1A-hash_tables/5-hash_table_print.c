@@ -11,34 +11,34 @@ void hash_table_print(const hash_table_t *ht)
 	hash_node_t *node, *temp;
 
 	if (ht == NULL)
-		printf("{}\n");
-	else
+		return;
+
+	printf("{");
+
+	total_node = node_total(ht);
+	count = 0;
+	for (i = 0; i < ht->size; i++)
 	{
-		printf("{");
-		total_node = node_total(ht);
-		count = 0;
-		for (i = 0; i < ht->size; i++)
+		node = ht->array[i];
+		if (node != NULL)
 		{
-			node = ht->array[i];
-			if (node != NULL)
+			if (node->next == NULL)
 			{
-				if (node->next == NULL)
+				count = print_node(node, count, total_node);
+			}
+			else
+			{
+				temp = node;
+				while (temp != NULL)
 				{
-					print_node(node, count, total_node);
-				}
-				else
-				{
-					temp = node;
-					while (temp != NULL)
-					{
-						print_node(temp, count, total_node);
-						temp = temp->next;
-					}
+					count = print_node(temp, count, total_node);
+					temp = temp->next;
 				}
 			}
 		}
-		printf("}\n");
 	}
+
+	printf("}\n");
 }
 
 
