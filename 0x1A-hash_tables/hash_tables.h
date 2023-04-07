@@ -58,4 +58,25 @@ unsigned long int hash_djb2(const unsigned char *str);
  */
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
 
+/**
+ * hash_table_set - Adds an element to the hash table
+ * @ht: Hash table to add or update key/value to
+ * @key: The Key, which cannot not be an empty string
+ * @value: The value associated with the key, which must be duplicated.
+ * Value can be an empty string
+ *
+ * Return: 1 if it succeeded, 0 otherwise
+ *
+ * Incase of collision, add the new node at the beginning of the list
+ */
+int hash_table_set(hash_table_t *ht, const char *key, const char *value);
+
+/**
+ * create_node - Initialises a new node with it key/value pair
+ * @key: The key
+ * @value: Value associated with the key
+ * Return: hash_node_t node
+ */
+hash_node_t *create_node(const char *key, const char *value);
+
 #endif /*_HASH_TABLES_*/
