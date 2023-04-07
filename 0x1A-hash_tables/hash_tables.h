@@ -94,4 +94,22 @@ char *hash_table_get(const hash_table_t *ht, const char *key);
  */
 void hash_table_print(const hash_table_t *ht);
 
+/**
+ * node_total - Get total allocated node
+ * @ht: Hash table
+ * Return: total allocated spaces
+ */
+unsigned long int node_total(const hash_table_t *ht);
+
+/**
+ * print_node - Print a particular node
+ * @node: Hash Node
+ * @count: count
+ * @total: Total space allocated
+ * Return: count
+ */
+unsigned long int print_node(hash_node_t *node, unsigned long int count,
+			     unsigned long int total);
+
+
 #endif /*_HASH_TABLES_*/
