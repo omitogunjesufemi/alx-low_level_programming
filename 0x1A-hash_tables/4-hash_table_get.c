@@ -12,13 +12,13 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	hash_node_t *node_gotten, *temp;
 
 	if (ht == NULL || key == NULL || strcmp(key, "") == 0)
-		return NULL;
+		return (NULL);
 
 	index = key_index((unsigned char *)key, ht->size);
 	node_gotten = ht->array[index];
 
 	if (node_gotten == NULL)
-		return NULL;
+		return (NULL);
 
 	if (strcmp(node_gotten->key, key) == 0)
 		return (node_gotten->value);
