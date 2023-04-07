@@ -79,4 +79,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value);
  */
 hash_node_t *create_node(const char *key, const char *value);
 
+/**
+ * hash_table_get - Retrieves a value associated with a key
+ * @ht: Hash Table
+ * @key: The key to be looked for
+ * Return: value associated with the element or NULL if key could not be found
+ */
+char *hash_table_get(const hash_table_t *ht, const char *key);
+
 #endif /*_HASH_TABLES_*/
