@@ -37,6 +37,7 @@ typedef struct hash_table_s
 /**
  * hash_table_create - Creates a Hash Table
  * @size: This is the size of the Hash Table
+ * Return: hash table
  */
 hash_table_t *hash_table_create(unsigned long int size);
 
