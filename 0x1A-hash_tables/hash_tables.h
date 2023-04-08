@@ -111,5 +111,16 @@ unsigned long int node_total(const hash_table_t *ht);
 unsigned long int print_node(hash_node_t *node, unsigned long int count,
 			     unsigned long int total);
 
+/**
+ * hash_table_delete - Deletes a hash table
+ * @ht: Hash table
+ */
+void hash_table_delete(hash_table_t *ht);
+
+/**
+ * free_node - Free a particular node
+ * @node: Node to be freed
+ */
+void free_node(hash_node_t *node);
 
 #endif /*_HASH_TABLES_*/
