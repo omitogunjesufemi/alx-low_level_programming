@@ -121,6 +121,6 @@ void hash_table_delete(hash_table_t *ht);
  * free_node - Free a particular node
  * @node: Node to be freed
  */
-void free_node(hash_node_t *node);
+void free_node(hash_node_t **node);
 
 #endif /*_HASH_TABLES_*/
