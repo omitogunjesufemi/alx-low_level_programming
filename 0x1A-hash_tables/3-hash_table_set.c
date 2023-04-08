@@ -1,5 +1,4 @@
 #include "hash_tables.h"
-
 /**
  * hash_table_set - Adds an element to the hash table
  * @ht: Hash table to add or update key/value to
@@ -45,6 +44,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		else
 		{
 			new_node = create_node(key, value);
+			if (dict->next != NULL && strcmp((dict->next)->key, key) == 0)
+			{
+				(dict->next)->value = strdup(value);
+				return (1);
+			}
 			if (new_node == NULL)
 				return (0);
 			new_node->next = dict;
