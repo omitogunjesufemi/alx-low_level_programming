@@ -161,24 +161,24 @@ char *shash_table_get(const shash_table_t *ht, const char *key)
 void shash_table_print(const shash_table_t *ht)
 {
 	unsigned long int i, count;
-	shash_node_t *node, *sprev, *snext;
+	shash_node_t *node;
 
 	count = 0;
 	printf("{");
-	sprev = NULL;
-	snext = NULL;
 
 	for (i = 0; i < ht->size; i++)
 	{
 		if (ht->array[i] != NULL)
 		{
 			node = ht->array[i];
-			node->sprev = sprev;
-			sprev = node;
-			if (count != 0)
-				printf(", ");
-			count++;
-			printf("'%s': '%s'", node->key, node->value);
+			while(node != NULL)
+			{
+				if (count != 0)
+					printf(", ");
+				count++;
+				printf("'%s': '%s'", node->key, node->value);
+				node = node->next;
+			}
 		}
 	}
 	printf("}\n");
