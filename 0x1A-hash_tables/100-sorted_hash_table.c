@@ -171,7 +171,7 @@ void shash_table_print(const shash_table_t *ht)
 		if (ht->array[i] != NULL)
 		{
 			node = ht->array[i];
-			while(node != NULL)
+			while (node != NULL)
 			{
 				if (count != 0)
 					printf(", ");
@@ -202,7 +202,7 @@ void shash_table_print_rev(const shash_table_t *ht)
 		if (ht->array[i] != NULL)
 		{
 			node = ht->array[i];
-			while(node != NULL)
+			while (node != NULL)
 			{
 				if (count != 0)
 					printf(", ");
