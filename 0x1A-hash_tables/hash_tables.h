@@ -180,6 +180,13 @@ shash_table_t *shash_table_create(unsigned long int size);
  */
 int shash_table_set(shash_table_t *ht, const char *key, const char *value);
 
+/**
+ * create_snode - Creates a sorted hash node
+ * @key: Key
+ * @value: Value associated to key
+ * Return: Node
+ */
+shash_node_t *create_snode(const char *key, const char *value);
 
 /**
  * shash_table_get - Return value associated to a key
@@ -188,5 +195,31 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value);
  * Return: value associated to key
  */
 char *shash_table_get(const shash_table_t *ht, const char *key);
+
+/**
+ * shash_table_print - Print the hash table using the sorted linked
+ * list
+ * @ht: Sorted Hash table
+ */
+void shash_table_print(const shash_table_t *ht);
+
+/**
+ * shash_table_print_rev - Print the hash table using the sorted linked
+ * list in reverse order
+ * @ht: Sorted Hash table
+ */
+void shash_table_print_rev(const shash_table_t *ht);
+
+/**
+ * shash_table_delete - Deletes a sorted hash table
+ * @ht: Sorted Hash table
+ */
+void shash_table_delete(shash_table_t *ht);
+
+/**
+ * free_snode - Free a particular sorted node
+ * @node: Node to be freed
+ */
+void free_snode(shash_node_t **node);
 
 #endif /*_HASH_TABLES_*/

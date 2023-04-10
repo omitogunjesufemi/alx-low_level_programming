@@ -12,7 +12,27 @@ int main(void)
 
 	hash_table_array_size = 1024;
 
-	s = "c";
+	s = "a";
+	/*printf("%lu\n", hash_djb2((unsigned char *)s));*/
+	printf("%lu\n", key_index((unsigned char *)s, hash_table_array_size));
+
+	s = "ab";
+	/*printf("%lu\n", hash_djb2((unsigned char *)s));*/
+	printf("%lu\n", key_index((unsigned char *)s, hash_table_array_size));
+
+	s = "ac";
+	/*printf("%lu\n", hash_djb2((unsigned char *)s));*/
+	printf("%lu\n", key_index((unsigned char *)s, hash_table_array_size));
+
+	s = "A";
+	/*printf("%lu\n", hash_djb2((unsigned char *)s));*/
+	printf("%lu\n", key_index((unsigned char *)s, hash_table_array_size));
+
+	s = "Ab";
+	/*printf("%lu\n", hash_djb2((unsigned char *)s));*/
+	printf("%lu\n", key_index((unsigned char *)s, hash_table_array_size));
+
+	s = "Ac";
 	/*printf("%lu\n", hash_djb2((unsigned char *)s));*/
 	printf("%lu\n", key_index((unsigned char *)s, hash_table_array_size));
 
