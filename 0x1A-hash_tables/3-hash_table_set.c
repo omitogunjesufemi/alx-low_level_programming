@@ -44,13 +44,13 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		/*Handling collision - add new node at the head of list*/
 		else
 		{
-			new_node = create_node(key, value);
 			if (dict->next != NULL && strcmp((dict->next)->key, key) == 0)
 			{
 				free((dict->next)->value);
 				(dict->next)->value = strdup(value);
 				return (1);
 			}
+			new_node = create_node(key, value);
 			if (new_node == NULL)
 				return (0);
 			new_node->next = dict;
