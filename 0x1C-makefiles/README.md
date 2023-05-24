@@ -11,3 +11,4 @@ The project consist of the following tasks:
 TASK | DESCRIPTION
 --- | ---
 `0-Makefile` | 0. make -f 0-Makefile
+`1-Makefile` | 1. make -f 1-Makefile
