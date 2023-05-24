@@ -9,7 +9,7 @@ $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 school.o: school.c m.h
-	$(CC)    -c -o school.o school.c
+	$(CC)      -c -o school.o school.c
 
 main.o: main.c m.h
-	$(CC)    -c -o main.o main.c
+	$(CC)      -c -o main.o main.c
