@@ -3,9 +3,7 @@ SRC = main.c school.c
 OBJ = $(patsubst %.c, %.o, $(SRC))
 NAME = school
 
-all: $(NAME)
-
-$(NAME): $(OBJ)
+all:$(OBJ)
 	$(CC) $(OBJ) -o $(NAME)
 
 school.o: school.c m.h
