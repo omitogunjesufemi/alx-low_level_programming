@@ -33,7 +33,7 @@ to the water around the island).
                     right = 1
                 if i > 0 and grid[i - 1][j] == 0:
                     top = 1
-                if (i < len(grid)) and (grid[i + 1][j] == 0):
+                if (i < len(grid) - 1) and (grid[i + 1][j] == 0):
                     bottom = 1
                 total = total + top + bottom + right + left
     return (total)
