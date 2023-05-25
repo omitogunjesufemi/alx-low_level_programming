@@ -4,10 +4,8 @@ OBJ = $(patsubst %.c, %.o, $(SRC))
 NAME = school
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
-.IGNORE: all
-
 .PHONY: all
-all: $(OBJ)
+all: $(OBJ) m.h
 	$(CC) $(OBJ) -o $(NAME)
 
 .PHONY: clean
