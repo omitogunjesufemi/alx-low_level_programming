@@ -27,13 +27,23 @@ to the water around the island).
             right = 0
             left = 0
             if grid[i][j] == 1:
-                if j > 0 and grid[i][j - 1] == 0:
+                if j == 0:
                     left = 1
-                if (j < len(grid[i]) - 1) and (grid[i][j + 1] == 0):
+                elif j > 0 and grid[i][j - 1] == 0:
+                    left = 1
+
+                if j == len(grid[i]) - 1:
                     right = 1
-                if i > 0 and grid[i - 1][j] == 0:
+                elif (j < len(grid[i]) - 1) and (grid[i][j + 1] == 0):
+                    right = 1
+
+                if i == 0:
                     top = 1
-                if (i < len(grid) - 1) and (grid[i + 1][j] == 0):
+                elif i > 0 and grid[i - 1][j] == 0:
+                    top = 1
+                if i == len(grid) - 1:
+                    bottom = 1
+                elif (i < len(grid) - 1) and (grid[i + 1][j] == 0):
                     bottom = 1
                 total = total + top + bottom + right + left
     return (total)
