@@ -16,3 +16,4 @@ TASK | DESCRIPTION
 `3-Makefile` | 3. make -f 3-Makefile
 `4-Makefile` | 4. A complete Makefile
 `5-island_perimeter.py` | A function def island_perimeter(grid): that returns the perimeter of the island described in grid
+`100-Makefile` | 6. make -f 100-Makefile
