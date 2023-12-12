@@ -27,4 +27,17 @@ int linear_search(int *array, size_t size, int value);
  */
 int binary_search(int *array, size_t size, int value);
 
+/**
+ * jump_search - Searches for a value in a sorted array of integers using
+ * Jump Search algorithm
+ * @array: Pointer to the first element of the array to search in
+ * @size: The number of elements in array
+ * @value: Value to search for
+ * Return: first index where value is located
+ * Assuming, array is sorted in ascending order
+ * If value is not present in array or array is NULL, return -1
+ * The jump step is the square root of the size of the array
+ */
+int jump_search(int *array, size_t size, int value);
+
 #endif
