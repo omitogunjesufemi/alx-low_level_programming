@@ -4,6 +4,23 @@
 #include <stdio.h>
 
 /**
+ * struct listint_s - singly linked list
+ *
+ * @n: Integer
+ * @index: Index of the node in the list
+ * @next: Pointer to the next node
+ *
+ * Description: singly linked list node structure
+ */
+typedef struct listint_s
+{
+    int n;
+    size_t index;
+    struct listint_s *next;
+} listint_t;
+
+
+/**
  * linear_search - Searches for a value in an array of integers
  * using Linear Search algorithm
  * @array: Pointer to the first element of the array to search in
@@ -72,5 +89,16 @@ int exponential_search(int *array, size_t size, int value);
  * If value is not present in array or if array is NULL, return -1
  */
 int advanced_binary(int *array, size_t size, int value);
+
+/**
+ * jump_list - Searches for a value in a sorted list of integers using Jump
+ * search algorithm
+ * @list: Pointer to the head of the list to search in
+ * @size: Number of nodes in list
+ * @value: Value to search for
+ * Return: Pointer to the first node where the value is located
+ * If value is not present in head or if head is NULL, return NULL
+ */
+listint_t *jump_list(listint_t *list, size_t size, int value);
 
 #endif
