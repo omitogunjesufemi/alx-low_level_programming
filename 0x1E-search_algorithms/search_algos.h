@@ -63,4 +63,14 @@ int interpolation_search(int *array, size_t size, int value);
  */
 int exponential_search(int *array, size_t size, int value);
 
+/**
+ * advanced_binary - Binary search that return the index of the first value
+ * @array: Pointer to the first element of the array to search in
+ * @size: Number of elements in array
+ * @value: Value to search for
+ * Return: where the index is located
+ * If value is not present in array or if array is NULL, return -1
+ */
+int advanced_binary(int *array, size_t size, int value);
+
 #endif
