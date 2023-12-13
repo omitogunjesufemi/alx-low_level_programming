@@ -51,7 +51,7 @@ int re_binary(int *array, size_t low, size_t high, int value)
 	}
 	else
 	{
-		if (array[mid] == array[mid - 1])
+		if (mid > 0 && array[mid] == array[mid - 1])
 		{
 			return (re_binary(array, low, mid, value));
 		}
