@@ -29,6 +29,7 @@ int advanced_binary(int *array, size_t size, int value)
  * @low: Lower bound
  * @high: Higer bound
  * @value: Value to search for
+ * Return: Index of search, or -1 if not found
  */
 int re_binary(int *array, size_t low, size_t high, int value)
 {
