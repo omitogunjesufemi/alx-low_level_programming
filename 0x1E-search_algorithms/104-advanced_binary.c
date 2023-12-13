@@ -35,9 +35,10 @@ int re_binary(int *array, size_t low, size_t high, int value)
 {
 	size_t mid;
 
-	print_array(array, low, high);
 	if (low > high)
 		return (-1);
+
+	print_array(array, low, high);
 	mid = (low + high) / 2;
 
 	if (array[mid] < value)
