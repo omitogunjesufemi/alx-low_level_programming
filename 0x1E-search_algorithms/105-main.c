@@ -15,7 +15,7 @@ int main(void)
 {
     listint_t *list, *res;
     int array[] = {
-        0, 1, 2, 3, 4, 7, 12, 15, 18, 19, 23, 53, 61, 62, 76, 99
+	    0, 1, 2, 2, 3, 4, 7, 12, 15, 18, 19, 23, 53, 53, 61, 62, 76, 99
     };
     size_t size = sizeof(array) / sizeof(array[0]);
 
@@ -26,6 +26,8 @@ int main(void)
     printf("Found %d at index: %lu\n\n", 53, res->index);
     res =  jump_list(list, size, 2);
     printf("Found %d at index: %lu\n\n", 2, res->index);
+    res =  jump_list(NULL, 0, 2);
+    printf("Found %d at index: %p\n\n", 2, (void *) res);
     res =  jump_list(list, size, 999);
     printf("Found %d at index: %p\n", 999, (void *) res);
 
