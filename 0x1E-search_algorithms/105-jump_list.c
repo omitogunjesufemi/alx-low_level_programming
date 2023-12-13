@@ -41,6 +41,9 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		if (end >= size - 1)
 		{
 			end = size - 1;
+			printf("Value checked array[%ld] = [%d]\n",
+				       end,
+				       find_node_at_index(list, end)->n);
 			printf("Value found between indexes [%ld] and [%ld]\n",
 			       start, end);
 			while (start <= end)
