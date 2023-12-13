@@ -19,6 +19,9 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	size_t start, end;
 	listint_t *find_node, *the_node;
 
+	if (list == NULL)
+		return (NULL);
+
 	start = 0;
 	end = (size_t) sqrt(size);
 
