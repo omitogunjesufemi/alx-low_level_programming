@@ -32,8 +32,8 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 
 	while (find_node->n < value)
 	{
-		printf("Value checked array[%ld] = [%d]\n", end,
-		       find_node->n);
+		printf("Value checked array[%ld] = [%d]\n", start,
+		       find_node_at_index(list, start)->n);
 
 		start = end;
 		end = end + ((size_t) sqrt(size));
@@ -55,7 +55,8 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 		find_node = find_node_at_index(list, min_value(end, size - 1));
 	}
 
-	printf("Value checked array[%ld] = [%d]\n", end, find_node->n);
+	printf("Value checked array[%ld] = [%d]\n",
+	       start, find_node_at_index(list, start)->n);
 
 	printf("Value found between indexes [%ld] and [%ld]\n", start, end);
 
