@@ -19,6 +19,24 @@ typedef struct listint_s
 	struct listint_s *next;
 } listint_t;
 
+/**
+ * struct skiplist_s - Singly linked list with an express lane
+ *
+ * @n: Integer
+ * @index: Index of the node in the list
+ * @next: Pointer to the next node
+ * @express: Pointer to the next node in the express lane
+ *
+ * Description: singly linked list node structure with an express lane
+ */
+typedef struct skiplist_s
+{
+	int n;
+	size_t index;
+	struct skiplist_s *next;
+	struct skiplist_s *express;
+} skiplist_t;
+
 
 /**
  * linear_search - Searches for a value in an array of integers
@@ -100,5 +118,14 @@ int advanced_binary(int *array, size_t size, int value);
  * If value is not present in head or if head is NULL, return NULL
  */
 listint_t *jump_list(listint_t *list, size_t size, int value);
+
+/**
+ * linear_skip - searches for a value in a sorted skip list of integers
+ * @list: pointer to the head of the skip list to search in
+ * @value: value to search for
+ * Return: pointer on the first node where value is located
+ * If value is not present in list or if head is NULL, return NULL
+ */
+skiplist_t *linear_skip(skiplist_t *list, int value);
 
 #endif
